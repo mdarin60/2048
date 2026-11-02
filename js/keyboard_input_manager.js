@@ -46,7 +46,12 @@ KeyboardInputManager.prototype.listen = function () {
     87: 0, // W
     68: 1, // D
     83: 2, // S
-    65: 3  // A
+    65: 3, // A
+    81: 4, // Q  raise tiles (up a layer)
+    69: 5, // E  lower tiles (down a layer)
+    33: 4, // Page Up
+    34: 5, // Page Down
+    32: 4  // Space
   };
 
   // Respond to direction keys

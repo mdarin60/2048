@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>2048</title>
+  <title>2048 3D</title>
 
   <link href="style/main.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="favicon.ico">
@@ -27,7 +27,7 @@
     </div>
 
     <div class="above-game">
-      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong><br><small>Arrows move tiles across a layer, <strong>Q</strong>/<strong>E</strong> (or Page Up/Page Down) move them up/down. Drag to spin the cube, scroll to zoom inside. When it fills up, use <strong>X</strong>-ray, <strong>F</strong> to explode the layers, or <strong>1&ndash;4</strong> to focus one layer (<strong>0</strong> for all). <strong>G</strong> hides the direction labels.</small></p>
       <a class="restart-button">New Game</a>
     </div>
 
@@ -72,8 +72,21 @@
       </div>
     </div>
 
+    <div class="view-controls">
+      <span class="view-label">View:</span>
+      <a data-view="xray" title="X">X-ray</a>
+      <a data-view="explode" title="F">Explode layers</a>
+      <a data-view="labels" title="G">Direction labels</a>
+      <span class="view-label">Layer:</span>
+      <a data-view="all" title="0">All</a>
+      <a data-view="0" title="1">1</a>
+      <a data-view="1" title="2">2</a>
+      <a data-view="2" title="3">3</a>
+      <a data-view="3" title="4">4</a>
+    </div>
+
     <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles across the layers and <strong>Q / E</strong> to move them up and down the cube. When two tiles with the same number touch, they <strong>merge into one!</strong>
     </p>
     <hr>
     <p>
@@ -89,7 +102,10 @@
   <script src="js/classlist_polyfill.js"></script>
   <script src="js/animframe_polyfill.js"></script>
   <script src="js/keyboard_input_manager.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
   <script src="js/html_actuator.js"></script>
+  <script src="js/three_actuator.js"></script>
   <script src="js/grid.js"></script>
   <script src="js/tile.js"></script>
   <script src="js/local_storage_manager.js"></script>
